@@ -1,0 +1,30 @@
+[package]
+name = "imapbackup"
+version = "1.4.8"
+edition = "2024"
+rust-version = "1.70"
+authors = ["Pedro Fernandes"]
+description = "Incremental IMAP mailbox backup utility"
+license = "MIT"
+readme = "README.md"
+
+[lib]
+name = "imapbackup"
+path = "src/lib.rs"
+
+[[bin]]
+name = "imapbackup"
+path = "src/main.rs"
+
+[dependencies]
+bzip2 = "0.4"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+ctrlc = "3.4"
+flate2 = "1.0"
+indexmap = "2.6"
+native-tls = "0.2.12"
+once_cell = "1.20"
+regex = "1.11"
+rpassword = "7.3"
+sha1 = "0.10"
+thiserror = "1.0"
